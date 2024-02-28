@@ -1,0 +1,8 @@
+import cv2
+image = cv2.imread('Artboard 8@2x.png', 1)
+image = cv2.resize(image, (0, 0), fx=0.5, fy=0.5)
+image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
+cv2.imwrite('new_img.jpg', image)
+cv2.imshow('image', image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
